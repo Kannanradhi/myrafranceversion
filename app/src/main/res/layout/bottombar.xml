@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/maintbl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_alignParentBottom="true"
+    android:layout_gravity="center"
+    android:background="@color/colorPrimary"
+    android:gravity="center" >
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_marginBottom="-4dp"
+        android:gravity="center" >
+
+        <LinearLayout
+            android:id="@+id/bottombar_one"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="22dp"
+                android:adjustViewBounds="false"
+                android:scaleType="fitXY"
+                android:src="@drawable/men_icon" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="13dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="Menu"
+                android:textColor="#FFFFFF"
+                android:textSize="10sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+               <LinearLayout
+            android:id="@+id/bottombar_two"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:adjustViewBounds="false"
+                android:scaleType="fitXY"
+                android:src="@drawable/refresh_icon" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="13dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="2dp"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="Sync"
+                android:textColor="#FFFFFF"
+                android:textSize="10sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+        
+        <LinearLayout
+            android:id="@+id/bottombar_three"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:adjustViewBounds="false"
+                android:scaleType="fitXY"
+                android:src="@drawable/service_icon" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="13dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="Service Calls"
+                android:textColor="#FFFFFF"
+                android:textSize="10sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+               
+<!--         <LinearLayout
+            android:id="@+id/bottombar_four"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:layout_marginBottom="2dp"
+                android:adjustViewBounds="false"
+                android:scaleType="fitXY"
+                android:src="@drawable/icon_checkouts" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="13dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="Order"
+                android:textColor="#FFFFFF"
+                android:textSize="10sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/bottombar_five"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:layout_marginBottom="2dp"
+                android:adjustViewBounds="false"
+                android:scaleType="fitXY"
+                android:src="@drawable/icon_cart" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="13dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="Pending"
+                android:textColor="#FFFFFF"
+                android:textSize="10sp"
+                android:textStyle="bold" />
+        </LinearLayout> -->
+    </TableRow>
+
+</TableLayout>

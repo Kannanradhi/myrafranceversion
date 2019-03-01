@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/White"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:weightSum="11" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+        <include
+            android:id="@+id/SCREEN_HEADER"
+            layout="@layout/titlebar" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/border_gray"
+        android:layout_weight="9" >
+
+        <LinearLayout
+            android:id="@+id/wrapper_edit"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:visibility="visible" >
+
+                        <TextView
+                android:id="@+id/btnLogin"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:singleLine="true"
+                android:text="@string/subject"
+                android:textColor="@color/colorPrimary"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:id="@+id/ll2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorPrimary"
+                android:orientation="horizontal" >
+
+                <EditText
+                    android:id="@+id/et_subject"
+                    android:layout_width="fill_parent"
+                    android:layout_height="80dp"
+                    android:layout_margin="0.5dp"
+                    android:background="#FFFFFF"
+                    android:ems="10"
+                    android:gravity="top|left"
+                    android:hint="@string/subject"
+                    android:inputType="textMultiLine"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:singleLine="false"
+                    android:textColor="@color/Black"
+                    android:textColorHint="@color/colorPrimary" />
+            </LinearLayout>
+            
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:singleLine="true"
+                android:text="@string/momeet"
+                android:textColor="@color/colorPrimary"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorPrimary"
+                android:orientation="horizontal" >
+
+                <EditText
+                    android:id="@+id/et_mom"
+                    android:layout_width="fill_parent"
+                    android:layout_height="180dp"
+                    android:layout_margin="0.5dp"
+                    android:background="#FFFFFF"
+                    android:ems="10"
+                    android:gravity="top|left"
+                    android:hint="@string/momeet"
+                    android:inputType="textMultiLine"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:singleLine="false"
+                    android:textColor="@color/Black"
+                    android:textColorHint="@color/colorPrimary" />
+            </LinearLayout>
+
+            <!--
+                 <TextView
+                android:id="@+id/btnLogin"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:singleLine="true"
+                android:text="@string/momeet"
+                android:textColor="@color/colorPrimary"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:id="@+id/ll2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/iSteerColor1"
+                android:orientation="horizontal" >
+
+                <EditText
+                    android:id="@+id/et_momeet"
+                    android:layout_width="fill_parent"
+                    android:layout_height="45dp"
+                    android:layout_margin="0.5dp"
+                    android:background="#FFFFFF"
+                    android:ems="10"
+                    android:hint="@string/momeet_hint"
+                    android:inputType="textMultiLine"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:singleLine="false"
+                    android:textColor="@color/Black"
+                    android:textColorHint="@color/iSteerColor1" />
+            </LinearLayout>
+
+            -->
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btnSaveMOM"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="bottom"
+        android:layout_weight="1"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:text="Save"
+        android:layout_margin="0dp"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        android:textColor="@color/White"
+        android:textSize="20sp" />
+
+</LinearLayout>

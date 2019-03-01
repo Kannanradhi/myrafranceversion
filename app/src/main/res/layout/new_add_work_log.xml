@@ -1,0 +1,835 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="listener"
+            type="com.isteer.service.activity.SRVAddWorklogScreen" />
+
+        <variable
+            name="services"
+            type="com.isteer.service.model.ServiceCallData" />
+
+        <variable
+            name="worklog"
+            type="com.isteer.service.model.WorkLogData" />
+    </data>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <include
+            android:id="@+id/titble_bar"
+            layout="@layout/titlebar"
+            android:layout_width="match_parent"
+            android:layout_height="56dp" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/titble_bar"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:id="@+id/lb_customer_name"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".7"
+                        android:text="@string/lb_customer_name"
+                        android:textSize="@dimen/textSizeSmall" />
+
+                    <TextView
+                        android:id="@+id/txt_customer_name"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.3"
+                        android:text="@={services.customer_name}"
+                        android:textSize="@dimen/textSizeSmall" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:id="@+id/lb_service_call"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.7"
+                        android:text="@string/lb_service_call"
+                        android:textSize="@dimen/textSizeSmall" />
+
+                    <TextView
+                        android:id="@+id/txt_service_call"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.3"
+                        android:text="@={services.service_desc}"
+                        android:textSize="@dimen/textSizeSmall" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:id="@+id/lb_repoted_date"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.7"
+                        android:text="@string/lb_reported_date"
+                        android:textSize="@dimen/textSizeSmall" />
+
+                    <TextView
+                        android:id="@+id/txt_repoted_date"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.3"
+                        android:text="@={services.report_date}"
+                        android:textSize="@dimen/textSizeSmall" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:id="@+id/lb_assigned_to"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.7"
+                        android:text="@string/lb_assigned_to"
+                        android:textSize="@dimen/textSizeSmall" />
+
+                    <TextView
+                        android:id="@+id/txt_assigned_to"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.3"
+                        android:text="@={services.customer_name}"
+                        android:textSize="@dimen/textSizeSmall" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:id="@+id/lb_issue"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.7"
+                        android:text="@string/lb_issue"
+                        android:textSize="@dimen/textSizeSmall" />
+
+                    <TextView
+                        android:id="@+id/txt_issue"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.3"
+                        android:text="@={services.service_issue}"
+                        android:textSize="@dimen/textSizeSmall" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:id="@+id/lb_description"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.7"
+                        android:text="@string/lb_description"
+                        android:textSize="@dimen/textSizeSmall" />
+
+                    <TextView
+                        android:id="@+id/txt_description"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.3"
+                        android:text="@={services.service_desc}"
+                        android:textSize="@dimen/textSizeSmall" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:weightSum="2">
+
+                    <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
+                        android:id="@+id/spn_service_type"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:hint="@string/service_type"
+                        android:text="@={worklog.service_type}"
+                        android:textSize="@dimen/textSizeSmall"
+                        app:met_floatingLabel="normal" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <CheckBox
+                            android:id="@+id/check_new_pump"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".1" />
+
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.4">
+
+                            <android.support.design.widget.TextInputEditText
+                                android:id="@+id/new_pump_value"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:enabled="false"
+                                android:hint="@string/new_pump"
+                                android:inputType="numberDecimal"
+                                android:singleLine="true"
+                                android:text="@={worklog.new_pump_value}"
+                                android:textSize="@dimen/textSizeSmall" />
+                        </android.support.design.widget.TextInputLayout>
+
+
+                        <CheckBox
+                            android:id="@+id/check_spare"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".1" />
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.4">
+
+                            <android.support.design.widget.TextInputEditText
+                                android:id="@+id/spare_value"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:enabled="false"
+                                android:hint="@string/spares"
+                                android:inputType="numberDecimal"
+                                android:singleLine="true"
+                                android:text="@={worklog.spares_value}"
+                                android:textSize="@dimen/textSizeSmall" />
+                        </android.support.design.widget.TextInputLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <CheckBox
+                            android:id="@+id/check_amc"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".1" />
+
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.4">
+
+                            <android.support.design.widget.TextInputEditText
+                                android:id="@+id/amc_value"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:enabled="false"
+                                android:hint="@string/amc"
+                                android:inputType="numberDecimal"
+                                android:singleLine="true"
+                                android:text="@={worklog.amc_amount}"
+                                android:textSize="@dimen/textSizeSmall" />
+                        </android.support.design.widget.TextInputLayout>
+
+
+                        <CheckBox
+                            android:id="@+id/check_ic"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".1" />
+
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.4">
+
+                            <android.support.design.widget.TextInputEditText
+                                android:id="@+id/ic_value"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:enabled="false"
+                                android:hint="@string/to_lc"
+                                android:inputType="numberDecimal"
+                                android:singleLine="true"
+                                android:text="@={worklog.to_ic_amount}"
+                                android:textSize="@dimen/textSizeSmall" />
+                        </android.support.design.widget.TextInputLayout>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.8"
+                        android:weightSum="3">
+
+                        <android.support.design.widget.TextInputEditText
+                            android:id="@+id/et_serviced_by"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:focusable="false"
+                            android:hint="@string/lb_serviced_by"
+                            android:inputType="text"
+                            android:paddingLeft="5dp"
+                            android:text="@={worklog.serviced_by_name}"
+                            android:textSize="@dimen/textSizeSmall" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.05"
+                        android:gravity="center"
+                        android:text=" + " />
+
+                    <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
+                        android:id="@+id/no_of_engineers"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.15"
+                        app:met_floatingLabel="normal" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/til_serviced_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <com.isteer.service.utility.DatePicker
+                            android:id="@+id/et_serviced_date"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:focusable="false"
+                            android:hint="@string/lb_service_date"
+                            android:paddingLeft="5dp"
+                            android:text="@={worklog.visited_date}"
+                            android:textSize="@dimen/textSizeSmall" />
+                    </android.support.design.widget.TextInputLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/til_start_time"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1">
+
+                        <com.isteer.service.utility.TimePicker
+                            android:id="@+id/start_time"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:focusable="false"
+                            android:hint="@string/ln_start_time"
+                            android:paddingLeft="5dp"
+                            android:text="@={worklog.start_time}"
+                            android:textSize="@dimen/textSizeSmall" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/til_stop_time"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1">
+
+                        <com.isteer.service.utility.TimePicker
+                            android:id="@+id/stop_time"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:focusable="false"
+                            android:hint="@string/lb_stop_time"
+                            android:paddingLeft="5dp"
+                            android:text="@={worklog.end_time}"
+                            android:textSize="@dimen/textSizeSmall" />
+                    </android.support.design.widget.TextInputLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="vertical">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <AutoCompleteTextView
+                            android:id="@+id/txt_products"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:hint="@string/lb_products"
+                            android:inputType="text"
+                            android:paddingLeft="5dp"
+                            android:text="@={worklog.product_name}"
+                            android:textSize="@dimen/textSizeSmall" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <TextView
+                        android:id="@+id/txt_products_id"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="0"
+                        android:inputType="number"
+                        android:paddingLeft="5dp"
+                        android:text="@={worklog.project_key}"
+                        android:textSize="@dimen/textSizeSmall" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+
+                    <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
+                        android:id="@+id/replacement"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="@string/lb_replacement"
+                        android:paddingLeft="5dp"
+                        android:text="@={worklog.replace_suggestion}"
+                        android:textColorHint="@color/colorPrimaryDark"
+                        android:textSize="@dimen/textSizeSmall"
+                        app:met_floatingLabel="normal" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+
+
+                    <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
+                        android:id="@+id/status"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="@string/lb_status"
+                        android:paddingLeft="5dp"
+                        android:textColorHint="@color/colorPrimaryDark"
+                        android:textSize="@dimen/textSizeSmall"
+                        app:met_floatingLabel="normal" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <android.support.design.widget.TextInputEditText
+                            android:id="@+id/txt_remark"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:hint="@string/lb_remark"
+                            android:inputType="text"
+                            android:paddingLeft="5dp"
+                            android:singleLine="false"
+                            android:text="@={worklog.remarks}"
+                            android:textSize="@dimen/textSizeSmall" />
+                    </android.support.design.widget.TextInputLayout>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="Spare Parts Used " />
+
+                    <CheckBox
+                        android:id="@+id/cb_spare_used"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/tv_add_spare"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:text=" Add "
+                        android:textColor="@color/colorPrimary"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_spare_used"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="3dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3"
+                            android:paddingLeft="5dp"
+                            android:text="Product Name" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="Rate" />
+
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="2dp"
+                            android:layout_weight="1"
+                            android:gravity="left"
+                            android:text="Qty" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="2dp"
+                            android:layout_weight="1"
+                            android:gravity="left"
+                            android:text="Total" />
+                    </LinearLayout>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rv_added_product"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    android:weightSum="4">
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="3"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="3"
+                                android:text="Labour Charge"
+                                android:textSize="@dimen/textSizeSmall" />
+
+                            <EditText
+                                android:id="@+id/et_labour_amount"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="2dp"
+                                android:layout_weight="2"
+                                android:background="@drawable/round_primary_bg_white_1dp"
+                                android:gravity="right"
+                                android:hint="0.0"
+                                android:inputType="numberDecimal"
+                                android:paddingBottom="2dp"
+                                android:paddingRight="5dp"
+                                android:paddingTop="2dp"
+                                android:text="@={worklog.labour_Amount}"
+                                android:textSize="@dimen/textSizeSmall" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="3"
+                                android:text="Visiting Charge"
+
+                                android:textSize="@dimen/textSizeSmall" />
+
+                            <EditText
+                                android:id="@+id/et_visit_charge"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="2dp"
+                                android:layout_weight="2"
+                                android:background="@drawable/round_primary_bg_white_1dp"
+                                android:gravity="right"
+                                android:hint="0.0"
+                                android:inputType="numberDecimal"
+
+                                android:paddingBottom="2dp"
+                                android:paddingRight="5dp"
+                                android:paddingTop="2dp"
+                                android:text="@={worklog.visiting_Charge}"
+                                android:textSize="@dimen/textSizeSmall" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="3"
+                                android:text="Other Charge"
+
+                                android:textSize="@dimen/textSizeSmall" />
+
+                            <EditText
+                                android:id="@+id/et_other_charge"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="2dp"
+                                android:layout_weight="2"
+                                android:background="@drawable/round_primary_bg_white_1dp"
+                                android:gravity="right"
+                                android:hint="0.0"
+                                android:inputType="numberDecimal"
+
+                                android:paddingBottom="2dp"
+                                android:paddingRight="5dp"
+                                android:paddingTop="2dp"
+                                android:text="@={worklog.other_Charge}"
+                                android:textSize="@dimen/textSizeSmall" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+
+                                android:layout_height="wrap_content"
+                                android:layout_weight="3"
+                                android:text="Total Amount"
+                                android:textSize="@dimen/textSizeSmall" />
+
+                            <EditText
+                                android:id="@+id/et_overall_total"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="2dp"
+                                android:layout_weight="2"
+                                android:background="@drawable/round_primary_bg_white_1dp"
+                                android:focusable="false"
+                                android:gravity="right"
+                                android:hint="0.0"
+                                android:inputType="numberDecimal"
+                                android:paddingBottom="2dp"
+                                android:paddingRight="5dp"
+                                android:paddingTop="2dp"
+                                android:text="@={worklog.total_amount}"
+                                android:textSize="@dimen/textSizeSmall" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+
+                                android:layout_height="wrap_content"
+                                android:layout_weight="3"
+                                android:text="Received Amount"
+                                android:textSize="@dimen/textSizeSmall" />
+
+                            <EditText
+                                android:id="@+id/et_recived_amount"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="2dp"
+                                android:layout_weight="2"
+                                android:background="@drawable/round_primary_bg_white_1dp"
+                                android:gravity="right"
+                                android:hint="0.0"
+                                android:inputType="numberDecimal"
+
+                                android:paddingBottom="2dp"
+                                android:paddingRight="5dp"
+                                android:paddingTop="2dp"
+                                android:text="@={worklog.received_amount}"
+                                android:textSize="@dimen/textSizeSmall" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+
+                                android:layout_height="wrap_content"
+                                android:layout_weight="3"
+                                android:text="Balance Amount"
+                                android:textSize="@dimen/textSizeSmall" />
+
+                            <EditText
+                                android:id="@+id/et_balance_amount"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="2dp"
+                                android:layout_weight="2"
+                                android:background="@drawable/round_primary_bg_white_1dp"
+                                android:focusable="false"
+                                android:gravity="right"
+                                android:hint="0.0"
+                                android:inputType="numberDecimal"
+                                android:paddingBottom="2dp"
+                                android:paddingRight="5dp"
+                                android:paddingTop="2dp"
+                                android:text="@={worklog.balance_amount}"
+                                android:textSize="@dimen/textSizeSmall" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+
+                    <Button
+                        android:id="@+id/btn_save"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorPrimary"
+                        android:text="save"
+                        android:textColor="@color/white" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+
+</layout>

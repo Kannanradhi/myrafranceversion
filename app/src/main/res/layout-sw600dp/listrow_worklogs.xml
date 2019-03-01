@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <LinearLayout
+        android:id="@+id/ll2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tv_status"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:singleLine="false"
+                android:gravity="left"
+                android:text="Incomplete"
+                android:textColor="@color/red"
+                android:textSize="20sp"
+                android:alpha=".7"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_productname"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:singleLine="false"
+                android:text="Billable Service"
+                android:textColor="@color/grey_dark"
+                android:textSize="20sp"
+                android:textStyle="normal" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_serviced_by"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:singleLine="false"
+            android:text="Dsr Demo on 12/12/2015, 10:00AM"
+            android:textColor="@color/grey_dark"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_entered_by"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:singleLine="false"
+            android:layout_gravity="right"
+            android:text="Entered by Dsr Demo on 12/12/2015, 10:00AM"
+            android:textColor="@color/grey_dark"
+            android:textSize="15sp"
+            android:textStyle="normal" />
+
+        <include
+            android:id="@+id/buttons"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            layout="@layout/tab_menu_worklog" />
+    </LinearLayout>
+
+</LinearLayout>

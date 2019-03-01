@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#00000000" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#00000000"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/listr_text_wrapper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/listr_po_tv_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="0.5"
+                android:gravity="left|center_vertical"
+                android:maxLines="2"
+                android:scrollHorizontally="false"
+                android:singleLine="false"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/listr_po_et_qty"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/round_primary_bg_white_1dp"
+                android:gravity="center"
+                android:hint="Qty"
+                android:inputType="number"
+                android:maxLength="6"
+                android:padding="1dp"
+                android:singleLine="true"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/listr_price_wrapper"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_below="@+id/listr_text_wrapper"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:background="@drawable/round_primary_bg_white_1dp"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/round_isteer_primary_half_r"
+                    android:gravity="center"
+                    android:maxLines="2"
+                    android:scrollHorizontally="false"
+                    android:singleLine="false"
+                    android:text="MRP"
+                    android:textColor="@color/White"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/listr_po_tv_mrp"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:background="@color/transparent_background"
+                    android:gravity="center"
+                    android:hint="0"
+                    android:inputType="numberDecimal"
+                    android:maxLength="7"
+                    android:padding="1dp"
+                    android:singleLine="true"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/round_primary_bg_white_1dp"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/listr_tv_name"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/round_isteer_primary_half_r"
+                    android:gravity="center"
+                    android:maxLines="2"
+                    android:scrollHorizontally="false"
+                    android:singleLine="false"
+                    android:text="Net Price"
+                    android:textColor="@color/White"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/listr_po_tv_netprice"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:background="@color/transparent_background"
+                    android:gravity="center"
+                    android:inputType="numberDecimal"
+                    android:maxLength="7"
+                    android:hint="0"
+                    android:padding="1dp"
+                    android:singleLine="true"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="15sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/listr_tab_wrapp"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_below="@+id/listr_price_wrapper"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:orientation="vertical" >
+
+            <include
+                android:id="@+id/listr_order_tab_wrapper"
+                layout="@layout/tab_menu_two"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/listr_tv_alert"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:scrollHorizontally="false"
+                android:singleLine="true"
+                android:text="*No internet connectivity to place order"
+                android:textColor="@color/red"
+                android:textSize="15sp"
+                android:visibility="visible" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

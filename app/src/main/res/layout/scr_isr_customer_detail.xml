@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/White"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:weightSum="11">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/SCREEN_HEADER"
+            layout="@layout/titlebar" />
+    </LinearLayout>
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/listr_text_wrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left|center_vertical"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="0.40"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/listr_tv_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center"
+                        android:gravity="left|center_vertical"
+                        android:scrollHorizontally="false"
+                        android:singleLine="true"
+                        android:text="Customer name"
+                        android:textColor="@color/iSteerColor1"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center"
+                        android:gravity="left|center_vertical"
+                        android:scrollHorizontally="false"
+                        android:singleLine="true"
+                        android:text="Area"
+                        android:textColor="@color/iSteerColor1"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center"
+                        android:gravity="left|center_vertical"
+                        android:scrollHorizontally="false"
+                        android:singleLine="true"
+                        android:text="Phone"
+                        android:textColor="@color/iSteerColor1"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center"
+                        android:gravity="left|center_vertical"
+                        android:scrollHorizontally="false"
+                        android:singleLine="true"
+                        android:text="Email"
+                        android:textColor="@color/iSteerColor1"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|center_vertical"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="0.60"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_customer_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center"
+                        android:gravity="left|center_vertical"
+                        android:scrollHorizontally="false"
+                        android:singleLine="true"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/tv_customer_area_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center"
+                        android:gravity="left|center_vertical"
+                        android:scrollHorizontally="false"
+                        android:singleLine="true"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/tv_customer_phone"
+                        android:layout_width="match_parent"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center"
+                        android:gravity="left|center_vertical"
+                        android:scrollHorizontally="false"
+                        android:singleLine="true"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/tv_customer_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center"
+                        android:gravity="left|center_vertical"
+                        android:scrollHorizontally="false"
+                        android:singleLine="true"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="18sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/listr_text_wrapper2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/listr_text_wrapper"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="left|top"
+                    android:layout_weight="0.4"
+                    android:gravity="left|center_vertical"
+                    android:scrollHorizontally="false"
+                    android:singleLine="true"
+                    android:text="Address"
+                    android:textColor="@color/iSteerColor1"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/tv_customer_address"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="0.6"
+                    android:gravity="left|center_vertical"
+                    android:scrollHorizontally="false"
+                    android:singleLine="false"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnProducts"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:background="@color/iSteerColor1"
+                android:text="Products"
+                android:textAllCaps="false"
+                android:textColor="@color/White"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/btnVisitPlans"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:background="@color/iSteerColor1"
+                android:text="Visit Plans"
+                android:textAllCaps="false"
+                android:textColor="@color/White"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/btnPlanAVisit"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:background="@color/iSteerColor1"
+                android:text="Plan a Visit"
+                android:textAllCaps="false"
+                android:textColor="@color/White"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/btnNearestCusts"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:background="@color/iSteerColor1"
+                android:text="Nearest Customers"
+                android:textColor="@color/White"
+                android:textAllCaps="false"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!--<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/SCREEN_FOOTER"
+            layout="@layout/bottombar" />
+    </LinearLayout>-->
+
+</LinearLayout>

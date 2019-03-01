@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Amshuhu Pump Service</string>
+    <string name="string_picker_title">STRING_PICKER_TITLE</string>
+    <string name="string_picker_dialog_values">STRING_PICKER_DIALOG_VALUES</string>
+    <string name="string_picker_type">STRING_PICKER_TYPE</string>
+    <string name="site_address">Site Address</string>
+    <string name="issue">Issue</string>
+    <string name="description">Description</string>
+    <string name="phone">Phone</string>
+    <string name="customer_name">Customer Name</string>
+    <string name="service_contract">Service Contract</string>
+    <string name="service_type">Service Type</string>
+    <string name="service_eng_count">Service Engineer Count</string>
+    <string name="is_spares_needed">Is Spares Needed</string>
+    <string name="serviced_date">Serviced Date</string>
+    <string name="start_time">Start Time</string>
+    <string name="end_time">End Time</string>
+    <string name="subject">Subject</string>
+    <string name="status">Status</string>
+    <string name="mom">Minutes of meeting</string>
+    <string name="remarks">Remarks</string>
+    <string name="momeet">Minutes of Meet</string>
+    <string name="momeet_hint">Minutes of Meet (Enter your discussion with the customer)</string>
+    <string name="lb_customer_name">Customer Name :</string>
+    <string name="lb_service_call">Service call :</string>
+    <string name="lb_reported_date">Reported Date :</string>
+    <string name="lb_assigned_to">Assigned to :</string>
+    <string name="lb_issue">Issue</string>
+    <string name="lb_description">Description :</string>
+    <string name="lb_service_type">Service Type :</string>
+    <string name="lb_service_date">Serviced Date</string>
+    <string name="ln_start_time">Start Time</string>
+    <string name="lb_stop_time">Stop Time</string>
+    <string name="lb_serviced_by">Serviced By</string>
+    <string name="lb_products">Product Name</string>
+    <string name="lb_replacement">Replacement Suggestion</string>
+    <string name="lb_status">Status</string>
+    <string name="lb_remark">Remarks</string>
+    <string name="ab_remove">Remove</string>
+    <string name="ab_cancel">Cancel</string>
+    <string name="ab_remove_spare_product">Are you sure to remove the product</string>
+    <string name="no_internet">No internet connection available</string>
+    <string name="loader">Loading</string>
+    <string name="new_pump">New Pump</string>
+    <string name="spares">Spares</string>
+    <string name="amc">AMC</string>
+    <string name="to_lc">to ic</string>
+
+
+    <string-array name="serviceType">
+        <item>Spare</item>
+        <item>New Pump</item>
+        <item>AMC</item>
+        <item>FOC</item>
+    </string-array>
+
+    <string-array name="replacement">
+        <item>Immediate</item>
+        <item>After 3 months</item>
+        <item>After 6 months</item>
+        <item>Not Necessary</item>
+    </string-array>
+
+    <string-array name="status">
+        <item>Office Closed</item>
+        <item>Completed</item>
+        <item>Incompleted</item>
+        <item>Partially completed</item>
+        <item>Reopend</item>
+    </string-array>
+</resources>
